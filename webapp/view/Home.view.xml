@@ -1,0 +1,49 @@
+<mvc:View 
+	controllerName="LicensedToCode.controller.Home" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" 
+	xmlns="sap.m">
+		<SplitApp id="idAppControl" mode="HideMode">
+			<masterPages>
+				<Page class="master">
+					<customHeader>
+						<Bar>
+							<contentLeft>
+								<Button icon="sap-icon://decline" press="onMenu"/>
+							</contentLeft>
+						</Bar>
+					</customHeader>
+					<content>
+						<html:div class="linksContainer">
+							<html:div><Link target="_self" text="Home" press="onHome" class="link"/></html:div>
+							<html:div><Link target="_self" text="Projects" press="onProjects" class="link"/></html:div>
+							<html:div><Link target="_self" text="Clients" class="link"/></html:div>
+							<html:div><Link target="_self" text="Services" class="link"/></html:div>
+							<html:div><Link target="_self" text="Contact" class="link"/></html:div>
+						</html:div>
+					</content>
+				</Page>
+			</masterPages>
+			<detailPages>
+				<Page>
+					<customHeader>
+						<Bar>
+							<contentMiddle>
+								<Image src="assets/images/logo-trans.png" />
+							</contentMiddle>
+						</Bar>
+					</customHeader>
+					<content>
+						<!--<html:div id="meraNaam">-->
+							<Image src="assets/images/cities1.jpg" />
+							<Image class="image2" />
+							<Image class="image3" />
+							<Image class="image4" />
+							<Image class="image5" />
+						<!--</html:div>-->
+					</content>
+				</Page>
+			</detailPages>
+		</SplitApp>
+</mvc:View>

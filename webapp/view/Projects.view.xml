@@ -1,0 +1,46 @@
+<mvc:View 
+	controllerName="LicensedToCode.controller.Projects" 
+	xmlns:html="http://www.w3.org/1999/xhtml" 
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" 
+	xmlns="sap.m">
+	<Page>
+		<customHeader>
+			<Bar>
+				<contentLeft>
+					<Button icon="sap-icon://menu2" press="onMenu"/>
+				</contentLeft>
+				<contentMiddle>
+					<Image src="assets/images/logo-trans.png" />
+				</contentMiddle>
+			</Bar>
+		</customHeader>
+		<content>
+			<SplitApp id="idAppControl" mode="HideMode">
+				<masterPages>
+					<Page class="master" showHeader="false">
+						<content>
+							<!--<html:div class="linksContainer">-->
+								<Link target="_self" text="Home" press="onHome" class="link"/>
+								<Link target="_self" text="Projects" class="link"/>
+								<Link target="_self" text="Clients" class="link"/>
+								<Link target="_self" text="Services" class="link"/>
+								<Link target="_self" text="Contact" class="link"/>
+							<!--</html:div>-->
+						</content>
+					</Page>
+				</masterPages>
+				<detailPages>
+					<Page showHeader="false">
+						<content>
+							<Image src="assets/images/cities4.jpg" class="projects" />
+							<html:div  class="doProj" >
+							<Text text="WHAT WE DO" class="pro"/>
+							</html:div>
+						</content>
+					</Page>
+				</detailPages>
+			</SplitApp>
+		</content>
+	</Page>
+</mvc:View>

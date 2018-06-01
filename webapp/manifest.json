@@ -39,8 +39,9 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "LicensedToCode.view.View1",
-			"type": "XML"
+			"viewName": "LicensedToCode.view.App",
+			"type": "XML",
+			"viewId": "app"
 		},
 		"dependencies": {
 			"minUI5Version": "1.30.0",
@@ -70,6 +71,53 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"controlId": "app",
+				"viewType": "XML",
+				"viewPath": "LicensedToCode.view",
+				"controlAggregation": "pages",
+				"transition": "slide"
+			},
+			"routes":[
+				{
+					"pattern": "",
+					"target": "home",
+					"name": "home"
+				},
+				{
+					"pattern": "about",
+					"target": "about",
+					"name": "about"
+				},
+				{
+					"pattern": "contact",
+					"target": "contact",
+					"name": "contact"
+				},
+				{
+					"pattern": "projects",
+					"target": "projects",
+					"name": "projects"
+				}],
+			"targets": {
+				"home": {
+					"viewId": "home",
+					"viewName": "Home",
+					"viewLevel": 1
+				},
+				"about": {
+					"viewId": "about",
+					"viewName": "About"
+				},
+				"projects": {
+					"viewId": "projects",
+					"viewName": "Projects",
+					"viewLevel": 2
+				}
+			}
 		}
 	}
 }
